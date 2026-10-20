@@ -1,11 +1,11 @@
--- Active: 1788267997462@@127.0.0.1@3306@smartcoffee_dml_bruno
+-- Active: 1788867938340@@127.0.0.1@3306@smartcoffee_dml_nicollas
 -- ============================================================
 -- AULA 08 - ATIVIDADE PRÁTICA DE DML
 -- Nome: 
 -- Turma: ______________________ Data: _________________
 -- Base: smartcoffee_dml
 -- ============================================================
-USE smartcoffee_dml_bruno;
+USE smartcoffee_dml_NICOLLAS;
 
 -- IMPORTANTE:
 -- Para toda questão de UPDATE ou DELETE, escreva primeiro um SELECT
@@ -14,16 +14,26 @@ USE smartcoffee_dml_bruno;
 -- PARTE A - INSERT
 
 -- 1. Cadastre dois novos clientes com dados diferentes.
-INSERT
+ INSERT INTO CLIENTE (NOME, EMAIL, TELEFONE, CIDADE,ATIVO) VALUES
+('beatriz','beatriz2@EMAIL.COM','199993040001','LIMEIRA',TRUE),
+('maria','maria2@EMAIL.COM','199950290003','CAMPINAS',TRUE);
 
 
 -- 2. Cadastre a categoria 'Especiais da Casa'.
-
+CREATE TABLE categoria (id_categoria INT PRIMARY KEY AUTO_INCREMENT, nome VARCHAR(60) NOT NULL UNIQUE);
 
 -- 3. Localize o id da categoria criada e cadastre três produtos nela.
+SET @ID_CATEGORIA = LAST_INSERT_ID(nome);
+INSERT INTO produto (`NOME_PRODUTO`, `PRECO`, `ATIVO`, `ID_CATEGORIA`) VALUES
+('Café Especial', 15.00, TRUE, @ID_CATEGORIA),
+('Capuccino', 12.00, TRUE, @ID_CATEGORIA),
+('Mocha', 14.00, TRUE, @ID_CATEGORIA);
 
+select * from produto 
 
 -- 4. Cadastre um terceiro cliente sem telefone.
+INSERT INTO cliente (NOME, EMAIL, TELEFONE, CIDADE, ATIVO) VALUES
+('Ricardo','Ricardo@email.com',NULL,'limeira',TRUE);
 
 
 -- 5. Crie um novo pedido para um dos clientes cadastrados.
