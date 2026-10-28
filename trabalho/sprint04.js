@@ -95,3 +95,8 @@ formularioPesquisa.addEventListener('submit', function (event) {
 
 // Mostra o carrinho vazio quando a página é aberta
 mostrarCarrinho();
+
+
+
+
+
