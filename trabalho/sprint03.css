@@ -180,6 +180,11 @@
             font-weight: bold;
         }
 
+        .stock-availability {
+            color: #075f45;
+            font-weight: bold;
+        }
+
         button {
             border: 0;
             border-radius: 5px;
@@ -192,6 +197,91 @@
 
         button:hover {
             background-color: #075f45;
+        }
+
+        button:disabled {
+            background-color: #777;
+            cursor: not-allowed;
+            opacity: 0.75;
+        }
+
+        button:disabled:hover {
+            background-color: #777;
+        }
+
+        .checkout-button {
+            margin-left: 8px;
+            background-color: #f08c00;
+        }
+
+        .checkout-button:hover:not(:disabled) {
+            background-color: #d97706;
+        }
+
+        #checkout-message {
+            color: #075f45;
+            font-weight: bold;
+        }
+
+        .payment-panel {
+            max-width: 620px;
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #cbd5d0;
+            border-radius: 8px;
+            background-color: white;
+        }
+
+        .payment-panel h3 {
+            margin-top: 0;
+        }
+
+        .demo-notice {
+            padding: 12px;
+            border-left: 4px solid #f08c00;
+            background-color: #fff4e6;
+        }
+
+        .payment-panel fieldset {
+            margin: 16px 0;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+        }
+
+        .payment-option {
+            display: block;
+            margin: 10px 0;
+        }
+
+        .demo-password-label,
+        #demo-password {
+            display: block;
+        }
+
+        #demo-password {
+            width: 100%;
+            max-width: 360px;
+            margin: 8px 0;
+            padding: 10px;
+            border: 1px solid #999;
+            border-radius: 5px;
+        }
+
+        #demo-password-help {
+            display: block;
+            margin-bottom: 16px;
+            color: #555;
+        }
+
+        .payment-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .cancel-payment-button {
+            background-color: #555;
         }
 
         button.remove-button {
@@ -262,4 +352,44 @@
             object-fit: contain;
         }
 
-        
+/* Logo do Supermercado 404 na extremidade da barra de navegação */
+nav {
+    position: relative;
+    min-height: 56px;
+    padding-left: 82px;
+}
+
+nav .brand-logo {
+    position: absolute;
+    left: 0;
+    top: 30%;
+    transform: translateY(-50%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 500px;
+    margin: 70;
+}
+
+nav .brand-logo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@media (max-width: 600px) {
+    nav {
+        padding-left: 0;
+        padding-top: 58px;
+    }
+
+    nav .brand-logo {
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        height: 50px;
+        width: 62px;
+    }
+}
