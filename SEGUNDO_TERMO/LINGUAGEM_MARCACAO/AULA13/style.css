@@ -116,7 +116,7 @@ img {
     overflow: hidden;
     border-radius: 14px;
     width: 220px;
-    height: 500px;
+    /* height: 500px; */
     /* height: max-content;
     width: 80%; */
 }
