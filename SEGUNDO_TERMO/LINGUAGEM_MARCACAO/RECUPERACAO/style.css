@@ -1,0 +1,40 @@
+:root {
+    /* paleta de cores */
+    --blue:#252440;
+    --ciano: #86BEDA;
+    --branco: #FFFFFF;
+
+    /* tipografia    */
+    --fonte-principal: 'Times New Roman', Times, serif;
+    --fonte-texto: 'Arial';
+    --fonte-secundaria: "open sans", sans-serif;
+
+}
+
+
+.inicio {
+    display: flex;
+    border: 2px solid #252440;
+    align-items: center; 
+
+
+    color: var(--branco);
+    background-color: var(--blue);
+
+} 
+
+.navegacao {
+    display: flex; 
+    /* flex-wrap: wrap; quebrar linhas */
+    /* flex-direction: row; - deixa em linhas */
+    /* text-decoration: none;
+    list-style: none;
+    gap: 48px;
+    margin: 0 20px 30px;
+    padding: 30px; */
+    align-items: flex-start; 
+    /* justify-content: space-between; */
+    align-content: flex-start;
+    
+}
+
